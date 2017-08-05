@@ -1,5 +1,7 @@
 package andben.com.tourneymanager.ui;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,7 +23,7 @@ import andben.com.tourneymanager.model.User;
 public class AddPlayerActivity extends AppCompatActivity {
     private static TeamPool teamPool = new TeamPool();
     private List<Team> teams;
-    private List<User> players;
+    private ArrayList<User> players;
     private Team selectedTeam;
     private int cursor = 0;
     private ImageView logoImage;
@@ -94,6 +96,15 @@ public class AddPlayerActivity extends AppCompatActivity {
                 setTeam(cursor);
                 Toast toast = Toast.makeText(AddPlayerActivity.this, user.getUsername() + " added to tournament", Toast.LENGTH_LONG);
                 toast.show();
+            }
+        });
+
+        startTourneyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddPlayerActivity.this, PlayersSummaryActivity.class);
+                intent.putParcelableArrayListExtra("players", players);
+                startActivity(intent);
             }
         });
 

@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".ui.AddPlayerActivity">
         </activity>
+        <activity android:name=".ui.PlayersSummaryActivity">
+        </activity>
     </application>
 
 </manifest>

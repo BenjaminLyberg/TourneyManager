@@ -8,6 +8,11 @@ public class User {
     private String username;
     private Team chosenTeam;
 
+    public User(String username, Team chosenTeam) {
+        this.username = username;
+        this.chosenTeam = chosenTeam;
+    }
+
     public String getUsername() {
         return username;
     }

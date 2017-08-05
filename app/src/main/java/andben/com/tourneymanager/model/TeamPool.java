@@ -1,6 +1,8 @@
 package andben.com.tourneymanager.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import andben.com.tourneymanager.R;
 
@@ -9,8 +11,7 @@ import andben.com.tourneymanager.R;
  */
 
 public class TeamPool {
-    private static Team[] mTeams = {
-            new Team("Anaheim Ducks", R.drawable.anaheim),
+    private static List<Team> mTeams = Arrays.asList(new Team("Anaheim Ducks", R.drawable.anaheim),
             new Team("Arizona Coyotes", R.drawable.arizona),
             new Team("Boston Bruins", R.drawable.boston),
             new Team("Buffalo Sabres", R.drawable.buffalo),
@@ -40,10 +41,9 @@ public class TeamPool {
             new Team("Vancouver Canucks", R.drawable.vancouver),
             new Team("Vegas Golden Knights", R.drawable.vegas),
             new Team("Washington Capitals", R.drawable.washington),
-            new Team("Winnipeg Jets", R.drawable.winnipeg),
-    };
+            new Team("Winnipeg Jets", R.drawable.winnipeg));
 
-    public static Team[] getTeams(){
+    public List<Team> getTeams(){
         return mTeams;
     }
 }

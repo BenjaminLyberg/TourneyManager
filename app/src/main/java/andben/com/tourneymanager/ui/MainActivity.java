@@ -1,7 +1,9 @@
 package andben.com.tourneymanager.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import andben.com.tourneymanager.R;
@@ -17,6 +19,15 @@ public class MainActivity extends AppCompatActivity {
 
         startButton = (Button) findViewById(R.id.newTourneyButton);
         historyButton = (Button) findViewById(R.id.tourneyHistoryButton);
+
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddPlayerActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
     }

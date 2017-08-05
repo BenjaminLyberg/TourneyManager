@@ -6,11 +6,11 @@ package andben.com.tourneymanager.model;
 
 public class Team {
     private String name;
-    private String image;
+    private int imageId;
 
-    public Team(String name, String image) {
+    public Team(String name, int imageId) {
         this.name = name;
-        this.image = image;
+        this.imageId = imageId;
     }
 
     public String getName() {
@@ -19,5 +19,13 @@ public class Team {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
     }
 }

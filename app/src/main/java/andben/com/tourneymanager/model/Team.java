@@ -10,10 +10,12 @@ import android.os.Parcelable;
 public class Team implements Parcelable {
     private String name;
     private int imageId;
+    private int sImageId;
 
-    public Team(String name, int imageId) {
+    public Team(String name, int imageId, int sImageId) {
         this.name = name;
         this.imageId = imageId;
+        this.sImageId = sImageId;
     }
 
     public String getName() {
@@ -32,6 +34,13 @@ public class Team implements Parcelable {
         this.imageId = imageId;
     }
 
+    public int getsImageId() {
+        return sImageId;
+    }
+
+    public void setsImageId(int sImageId) {
+        this.sImageId = sImageId;
+    }
 
     @Override
     public int describeContents() {
@@ -42,11 +51,13 @@ public class Team implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.name);
         dest.writeInt(this.imageId);
+        dest.writeInt(this.sImageId);
     }
 
     protected Team(Parcel in) {
         this.name = in.readString();
         this.imageId = in.readInt();
+        this.sImageId = in.readInt();
     }
 
     public static final Parcelable.Creator<Team> CREATOR = new Parcelable.Creator<Team>() {

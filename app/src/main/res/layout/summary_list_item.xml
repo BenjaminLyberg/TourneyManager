@@ -8,48 +8,39 @@
                 android:paddingBottom="8dp"
                 tools:background="@drawable/bg_gradient">
 
-    <TextView
-        android:id="@+id/timeLabel"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:textColor="#ffffffff"
-        android:textSize="24sp"
-        tools:text="12 PM"/>
 
     <ImageView
-        android:id="@+id/iconImageView"
+        android:id="@+id/logoImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_centerInParent="true"
-        android:layout_toEndOf="@+id/timeLabel"
-        android:layout_toRightOf="@+id/timeLabel"
+        android:paddingRight="10dp"
         app:srcCompat="@drawable/anaheims"/>
 
     <TextView
-        android:id="@+id/temperatureLabel"
+        android:id="@+id/playerLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/logoImageView"
+        android:layout_toRightOf="@+id/logoImageView"
         android:textColor="#ffffffff"
         android:textSize="24sp"
-        tools:text="100"/>
+        tools:text="Benjamin"/>
+
 
     <TextView
-        android:id="@+id/summaryLabel"
+        android:id="@+id/teamLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/timeLabel"
-        android:layout_toEndOf="@+id/iconImageView"
-        android:layout_toLeftOf="@+id/temperatureLabel"
-        android:layout_toRightOf="@+id/iconImageView"
+        android:layout_alignBottom="@+id/playerLabel"
+        android:layout_toEndOf="@+id/playerLabel"
+        android:layout_toRightOf="@+id/playerLabel"
+        android:layout_centerVertical="true"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp"
         android:textColor="#ffffffff"
-        tools:text="Partly cloudy"/>
+        tools:text="Anaheim Ducks"/>
 </RelativeLayout>
